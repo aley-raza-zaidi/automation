@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Person Management</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px 0;
+            width: 95%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Person Management Application</h1>
+
+    <h2>Enter Person Details</h2>
+
+    <form method="POST">
+
+        <label>Person Name</label>
+        <input type="text" name="name"
+               placeholder="Enter person name" required>
+
+        <label>Age</label>
+        <input type="number" name="age"
+               placeholder="Enter age" min="0" max="150" required>
+
+        <label>Telephone</label>
+        <input type="tel" name="telephone"
+               placeholder="Enter telephone number" required>
+
+        <label>City</label>
+        <input type="text" name="city"
+               placeholder="Enter city" required>
+
+        <button type="submit">Add Person</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Person Records</h2>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Telephone</th>
+            <th>City</th>
+        </tr>
+
+        {% for person in persons %}
+
+        <tr>
+            <td>{{ person[0] }}</td>
+            <td>{{ person[1] }}</td>
+            <td>{{ person[2] }}</td>
+            <td>{{ person[3] }}</td>
+            <td>{{ person[4] }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
