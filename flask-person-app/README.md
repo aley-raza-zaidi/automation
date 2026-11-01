@@ -20,14 +20,13 @@ Docker – packaging your application into a Docker image.
 Docker Compose – running Flask and PostgreSQL together in separate containers.
 
 flask-person-app/
-│
-├── app.py
-├── requirements.txt
-├── Dockerfile
-├── docker-compose.yml
-│
-└── templates/
-    └── index.html
+  app.py
+  requirements.txt
+  Dockerfile
+  docker-compose.yml
+  templates/
+   index.html
+
 ---
 
 ## Workflow
