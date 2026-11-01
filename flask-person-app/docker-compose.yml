@@ -1,26 +1,3 @@
-# In our project, we have two services:
-# - web – our Python Flask application.
-# - db – our PostgreSQL database.
-# Instead of manually creating and configuring two containers, Docker Compose does everything for us.
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-##
-
-
-
 services:
 
   web:
