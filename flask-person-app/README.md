@@ -99,22 +99,21 @@ SELECT
 FROM information_schema.columns
 WHERE table_name = 'persons';
 
-### Useful PostgreSQL commands cheat sheet
+# Useful PostgreSQL commands cheat sheet
 Command	What it does
-\l	List databases
-\c persondb	Connect to database
+\l	            -> List databases
+\c persondb     -> Connect to database
 \dt	List tables
-\d persons	Show table structure
-\d+ persons	Show detailed table structure
+\d persons	    -> Show table structure
+\d+ persons	    -> Show detailed table structure
 \di	List indexes
 \du	List database users
 \dn	List schemas
-\conninfo	Show current connection
+\conninfo	      -> Show current connection
 \q	Exit PostgreSQL
-```
 
 
-Docker compose command (docker compose V1)
+# Docker compose command (docker compose V1)
 Build and start	            -> sudo docker-compose up --build -d
 Start containers            -> sudo docker-compose start
 Stop containers          	  -> sudo docker-compose stop
