@@ -43,3 +43,45 @@ Web browser <-> Container 1 - Flask Application (Python + Flask + HTML) Port 500
 ```bash
 sudo docker-compose up --build -d
 
+
+### To see database definition, table name, table entries
+
+```bash
+sudo docker exec -it postgres_db psql -U postgres -d persondb
+
+
+1. List all databases
+\l
+
+2. Connect to a database
+\c persondb
+
+
+3. List all tables
+\dt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
