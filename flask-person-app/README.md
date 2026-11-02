@@ -46,7 +46,6 @@ sudo docker-compose up --build -d
 
 ### To see database definition, table name, table entries
 
-```bash
 sudo docker exec -it postgres_db psql -U postgres -d persondb
 
 
@@ -100,8 +99,6 @@ SELECT
 FROM information_schema.columns
 WHERE table_name = 'persons';
 
-´´´
-
 ### Useful PostgreSQL commands cheat sheet
 Command	What it does
 \l	List databases
@@ -114,10 +111,18 @@ Command	What it does
 \dn	List schemas
 \conninfo	Show current connection
 \q	Exit PostgreSQL
+```
 
 
-
-
+Docker compose command (docker compose V1)
+Build and start	            -> sudo docker-compose up --build -d
+Start containers            -> sudo docker-compose start
+Stop containers          	  -> sudo docker-compose stop
+Stop and remove containers 	-> sudo docker-compose down
+View running containers	    -> sudo docker ps
+View logs	                  -> sudo docker-compose logs
+View Flask logs	            -> sudo docker logs flask_app
+View PostgreSQL logs	      -> sudo docker logs postgres_db
 
 
 
