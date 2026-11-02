@@ -61,8 +61,59 @@ sudo docker exec -it postgres_db psql -U postgres -d persondb
 \dt
 
 
+\d persons
+
+# expected output
+
+ Column    | Type
+-----------+------------------------
+ id        | integer
+ name      | character varying(100)
+ age       | integer
+ telephone | character varying(30)
+ city      | character varying(100)
 
 
+# for detailed db definition
+\d+ persons
+
+5. Display all table entries
+SELECT * FROM persons;
+
+
+6. Display selected columns
+SELECT name, age, city FROM persons;
+
+
+7. Count the number of records
+SELECT COUNT(*) FROM persons;
+
+
+8. Display the SQL definition of the table
+
+You can also retrieve the table's column definitions using:
+SELECT
+    column_name,
+    data_type,
+    character_maximum_length,
+    is_nullable
+FROM information_schema.columns
+WHERE table_name = 'persons';
+
+´´´
+
+### Useful PostgreSQL commands cheat sheet
+Command	What it does
+\l	List databases
+\c persondb	Connect to database
+\dt	List tables
+\d persons	Show table structure
+\d+ persons	Show detailed table structure
+\di	List indexes
+\du	List database users
+\dn	List schemas
+\conninfo	Show current connection
+\q	Exit PostgreSQL
 
 
 
